@@ -7,9 +7,5 @@ phases:
   build:
     commands:
        - make install
-  package:
-    commands:
        - make package
-  publish:
-    commands:
        - make publish
