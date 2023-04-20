@@ -10,7 +10,7 @@ RUN pip3 -V && pip3 install -r requirements.txt
 
 COPY webapp/* /webapp
 
-COPY roberta-sequence/roberta-sequence-classification-9.onnx /webapp
+COPY roberta-sequence-classification-9.onnx /webapp
 
 ENTRYPOINT [ "python" ]
 
