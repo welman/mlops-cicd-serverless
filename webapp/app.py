@@ -15,6 +15,9 @@ def to_numpy(tensor):
         tensor.detach().cpu().numpy() if tensor.requires_grad else tensor.cpu().numpy()
     )
 
+@app.route("/health")
+def health():
+    return "success"
 
 @app.route("/")
 def home():
@@ -52,4 +55,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=True)

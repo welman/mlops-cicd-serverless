@@ -1,1 +1,1 @@
-docker run -p 5000:5000 welmsdev/flask-roberta
+docker run -p 8080:8080 8ce586a2dc95
