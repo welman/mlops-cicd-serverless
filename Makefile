@@ -31,3 +31,14 @@ lint:
 	pylint --disable=R,C invoke.py
 
 all: install lint test
+
+
+STACK_NAME=ml-example-app-stack
+
+deploy-app-runner:
+	echo $(STACK_NAME)
+	aws cloudformation create-stack \
+		--stack-name $(STACK_NAME) \
+		--template-body file://infrastructure/app-runner.yaml \
+		--capabilities CAPABILITY_NAMED_IAM \
+		--parameters ParameterKey=AppStackName,ParameterValue=$(STACK_NAME)
