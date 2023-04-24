@@ -9,4 +9,4 @@ phases:
        - make install
        - make package
        - make publish
-       - make deploy-app-runner
+       #- make deploy-app-runner # moved to pipeline
